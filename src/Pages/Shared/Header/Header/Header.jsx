@@ -41,7 +41,7 @@ const Header = () => {
       </div>
 
       {toggleMenu && (
-        <div className="nav-links flex flex-col items-center pb-4 md:hidden w-9/12 mx-auto">
+        <div className="nav-links flex flex-col items-center pb-4 mb-8 md:hidden w-9/12 mx-auto">
           <MenuLinks />
         </div>
       )}
