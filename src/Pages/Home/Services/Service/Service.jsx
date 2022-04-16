@@ -7,7 +7,7 @@ const Service = ({ name, price, description, image, left }) => {
         left ? '' : 'md:flex-row-reverse'
       }`}
     >
-      <img className="md:w-[50%]" src={image} alt="" />
+      <img className="md:w-[50%] rounded" src={image} alt="" />
       <div className="mx-16">
         <h1 className="text-3xl font-medium mb-6">{name}</h1>
         <p className="">{description}</p>
