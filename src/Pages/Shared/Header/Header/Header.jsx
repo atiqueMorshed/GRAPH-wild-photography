@@ -17,11 +17,11 @@ const Header = () => {
         </div>
 
         <Link to="/">
-          <div className="flex flex-col justify-center items-center md:mx-10 lg:mx-20">
+          <div className="flex flex-col justify-center items-center md:mx-5 lg:mx-20">
             <h1 className="font-montserratSubrayada text-2xl font-semibold">
               GRAPH
             </h1>
-            <p className="font-monteCarlo text-xl">Wild Photography</p>
+            <p className="font-monteCarlo text-xl">Wild Life Photography</p>
           </div>
         </Link>
 
