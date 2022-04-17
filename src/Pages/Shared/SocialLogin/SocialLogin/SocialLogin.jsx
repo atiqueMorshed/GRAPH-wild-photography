@@ -30,13 +30,13 @@ const SocialLogin = ({ from }) => {
       </p>
       <SocialButton
         icon={<FontAwesomeIcon className="w-7 h-7" icon={faGoogle} />}
-        text="Signin with Google"
+        text="Login with Google"
         error={googleError}
         signInWithGoogle={signInWithGoogle}
       />
       <SocialButton
         icon={<FontAwesomeIcon className="w-7 h-7" icon={faGithub} />}
-        text="Signin with Github"
+        text="Login with Github"
         error={githubError}
         signInWithGoogle={signInWithGithub}
       />

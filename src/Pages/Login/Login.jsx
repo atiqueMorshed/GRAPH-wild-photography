@@ -199,7 +199,7 @@ const Login = () => {
               Reset
             </button>
           </p>
-          <FormError className="pt-2" error={resetError?.message} />
+          <FormError error={resetError?.message} />
 
           <p className="text-sm mt-5">
             Dont have an account?{' '}

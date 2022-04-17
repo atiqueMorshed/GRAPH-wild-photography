@@ -9,6 +9,7 @@ import {
 import auth from '../../Firebase/firebase.init';
 import FormError from '../Shared/FormError/FormError';
 import LoadingSpinner from '../Shared/LoadingSpinner/LoadingSpinner';
+import SocialLogin from '../Shared/SocialLogin/SocialLogin/SocialLogin';
 
 const Register = () => {
   const nameRef = useRef('');
@@ -206,6 +207,7 @@ const Register = () => {
             Login
           </Link>
         </p>
+        <SocialLogin from="/" />
       </form>
     </div>
   );

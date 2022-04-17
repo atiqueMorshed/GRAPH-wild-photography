@@ -22,3 +22,5 @@
 - react-toastify
 - firebase
 - react-firebase-hooks
+- framer-motion
+- react-hook-form

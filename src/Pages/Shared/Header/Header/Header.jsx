@@ -20,6 +20,8 @@ const Header = () => {
   );
   const [error, setError] = useState();
 
+  console.log(user);
+
   const [closeEmailVerificationWarning, setCloseEmailVerificationWarning] =
     useState(false);
 
