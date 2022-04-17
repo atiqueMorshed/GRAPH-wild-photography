@@ -1,7 +1,7 @@
 # GRAPH - Wild Photography
 
-> [Go to Live Website](https://www.google.com/)
-> or https://www.google.com/
+> [Go to Live Website](https://ph-milestone-10-graph.web.app/)
+> or https://ph-milestone-10-graph.web.app/
 
 ## Features
 
