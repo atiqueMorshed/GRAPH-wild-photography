@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import About from './Pages/About/About';
+import Blog from './Pages/Blog/Blog';
 import Checkout from './Pages/Checkout/Checkout';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login';
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/blog" element={<Blog />} />
         <Route
           path="/checkout/:id"
           element={
