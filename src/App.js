@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import About from './Pages/About/About';
 import Checkout from './Pages/Checkout/Checkout';
 import Home from './Pages/Home/Home/Home';
-import Services from './Pages/Home/Services/Services/Services';
+import Login from './Pages/Login/Login';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header/Header';
 import NotFound from './Pages/Shared/NotFound/NotFound';
@@ -15,6 +15,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/checkout/:id" element={<Checkout />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
