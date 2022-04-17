@@ -7,6 +7,7 @@ import {
 } from 'react-firebase-hooks/auth';
 import auth from '../../Firebase/firebase.init';
 import FormError from '../Shared/FormError/FormError';
+import LoadingSpinner from '../Shared/LoadingSpinner/LoadingSpinner';
 
 const Login = () => {
   const location = useLocation();
@@ -93,13 +94,14 @@ const Login = () => {
 
     if (!hasError) {
       signInWithEmailAndPassword(email, password);
-      console.log(user);
     } else {
       formErrorTimeout = setTimeout(() => setFormError({}), 5000);
     }
   };
 
-  return (
+  return loading || authenticatedLoading ? (
+    <LoadingSpinner />
+  ) : (
     <div className="max-w-[600px] mx-auto flex justify-center my-20">
       <form
         className=" px-16 py-20 shadow"

@@ -8,6 +8,7 @@ import {
 } from 'react-firebase-hooks/auth';
 import auth from '../../Firebase/firebase.init';
 import FormError from '../Shared/FormError/FormError';
+import LoadingSpinner from '../Shared/LoadingSpinner/LoadingSpinner';
 
 const Register = () => {
   const nameRef = useRef('');
@@ -124,7 +125,9 @@ const Register = () => {
     }
   };
 
-  return (
+  return loading || authenticatedLoading ? (
+    <LoadingSpinner />
+  ) : (
     <div className="max-w-[600px] mx-auto flex justify-center my-20">
       <form
         className=" px-16 py-20 shadow"
