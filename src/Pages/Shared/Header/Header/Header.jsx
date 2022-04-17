@@ -7,8 +7,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CustomLink from '../CustomLink/CustomLink';
 import MenuLinks from '../MenuILinks/MenuLinks';
 import HashLink from '../HashLink/HashLink';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../../Firebase/firebase.init';
+import { signOut } from 'firebase/auth';
 
 const Header = () => {
+  const [user] = useAuthState(auth);
+
   const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
@@ -33,7 +38,12 @@ const Header = () => {
         <div className="hidden md:flex gap-4">
           <CustomLink to="/about">About</CustomLink>
           <CustomLink to="/blog">Blog</CustomLink>
-          <CustomLink to="/login">Login</CustomLink>
+
+          {user ? (
+            <button onClick={() => signOut(auth)}>Logout</button>
+          ) : (
+            <CustomLink to="/login">Login</CustomLink>
+          )}
         </div>
 
         <div className="burger-menu md:hidden">

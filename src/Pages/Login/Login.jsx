@@ -1,19 +1,38 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import {
+  useAuthState,
+  useSignInWithEmailAndPassword,
+} from 'react-firebase-hooks/auth';
 import auth from '../../Firebase/firebase.init';
 import FormError from '../Shared/FormError/FormError';
 
 const Login = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const from = location?.state?.from?.pathname || '/';
+
   const emailRef = useRef('');
   const passwordRef = useRef('');
 
   const [formError, setFormError] = useState({});
+
+  const [authenticatedUser, authenticatedLoading] = useAuthState(auth);
+
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
   let formErrorTimeout;
+
+  useEffect(() => {
+    if (user) navigate(from, { replace: true });
+  }, [user, navigate, from]);
+
+  useEffect(() => {
+    if (authenticatedUser) navigate(from);
+  }, [authenticatedUser, navigate, from]);
 
   useEffect(() => {
     return () => {
