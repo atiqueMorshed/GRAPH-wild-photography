@@ -6,7 +6,7 @@ const Blog = () => {
           <h1 className="text-xl font-semibold mb-4">
             [Q1] What is the difference between authentication and authorization
           </h1>
-          <p>
+          <p className="text-justify">
             Authentication checks for user identification. It checks if the user
             is who he says he is. For example, when a person logs into a
             website, he has to enter his email/ password to verify that he is
@@ -25,7 +25,7 @@ const Blog = () => {
             [Q2] Why are you using firebase? What other options do you have to
             implement authentication?
           </h1>
-          <p>
+          <p className="text-justify">
             I'm using firebase mainly for user authentication. Firebase is a
             great choice for secure access to client-side applications without
             any backend. Since I'm only using react without any backend,
@@ -46,7 +46,7 @@ const Blog = () => {
             [Q3] What other services does firebase provide other than
             authentication?
           </h1>
-          <p>
+          <p className="text-justify">
             Apart from authentication, firebase provides database (firestore and
             realtime), storage, hosting, Google analytics, cloud messaging, and
             more.
