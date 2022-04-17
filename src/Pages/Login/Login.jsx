@@ -8,6 +8,7 @@ import {
 import auth from '../../Firebase/firebase.init';
 import FormError from '../Shared/FormError/FormError';
 import LoadingSpinner from '../Shared/LoadingSpinner/LoadingSpinner';
+import SocialLogin from '../Shared/SocialLogin/SocialLogin/SocialLogin';
 
 const Login = () => {
   const location = useLocation();
@@ -102,9 +103,9 @@ const Login = () => {
   return loading || authenticatedLoading ? (
     <LoadingSpinner />
   ) : (
-    <div className="max-w-[600px] mx-auto flex justify-center my-20">
+    <div className="w-10/12 max-w-[600px] mx-auto flex justify-center my-20">
       <form
-        className=" px-16 py-20 shadow"
+        className="px-4 md:px-16 py-20 shadow"
         onSubmit={handleLoginWithEmailAndPassword}
       >
         <h1 className="text-3xl font-medium pb-4 text-center mb-8">Login</h1>
@@ -113,7 +114,7 @@ const Login = () => {
           <input
             ref={emailRef}
             type="email"
-            className="shadow-sm border text-sm rounded block  w-[250px] md:w-[350px] p-2"
+            className="shadow-sm border text-sm rounded block w-[250px] md:w-[350px] p-2"
             placeholder="Email"
             required
           />
@@ -124,7 +125,7 @@ const Login = () => {
           <input
             ref={passwordRef}
             type="password"
-            className="shadow-sm border text-sm rounded block  w-[250px] md:w-[350px] p-2"
+            className="shadow-sm border text-sm rounded block w-[250px] md:w-[350px] p-2"
             placeholder="Password"
             required
           />
@@ -147,6 +148,8 @@ const Login = () => {
             Register
           </Link>
         </p>
+
+        <SocialLogin from={from} />
       </form>
     </div>
   );

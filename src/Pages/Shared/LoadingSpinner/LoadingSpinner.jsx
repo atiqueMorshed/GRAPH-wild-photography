@@ -1,9 +1,13 @@
 import React from 'react';
 import spinner from '../../../Spinner.svg';
 
-const LoadingSpinner = () => {
+const LoadingSpinner = ({ notFullHeight }) => {
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div
+      className={`flex justify-center items-center ${
+        notFullHeight ? '' : 'h-screen'
+      }`}
+    >
       <img src={spinner} alt="" />
     </div>
   );
