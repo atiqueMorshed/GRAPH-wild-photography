@@ -1,9 +1,12 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+
 import CustomLink from '../CustomLink/CustomLink';
 import MenuLinks from '../MenuILinks/MenuLinks';
+import HashLink from '../HashLink/HashLink';
 
 const Header = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -12,8 +15,10 @@ const Header = () => {
     <div className="">
       <div className="flex justify-between md:justify-center items-center py-4 w-10/12 mx-auto">
         <div className="hidden md:flex lg:gap-4">
-          <CustomLink to="/home">Home</CustomLink>
-          <CustomLink to="/service">Services</CustomLink>
+          <CustomLink to="/">Home</CustomLink>
+          <HashLink to="/#services" id="services">
+            Services
+          </HashLink>
         </div>
 
         <Link to="/">

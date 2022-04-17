@@ -10,7 +10,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <div className="bg-black text-white pt-28 pb-10 mt-20 text-center">
+    <div className="bg-black text-white pt-28 pb-10 mt-28 text-center">
       <div className="social flex gap-6 md:gap-12 justify-center mb-7">
         <a href="https://www.twitter.com" target="_blank" rel="noreferrer">
           <FontAwesomeIcon className="h-7 w-7" icon={faTwitter} />
