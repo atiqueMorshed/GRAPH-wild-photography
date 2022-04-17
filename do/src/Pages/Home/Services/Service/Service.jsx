@@ -9,23 +9,27 @@ const Service = ({ id, name, price, description, image, left }) => {
         left ? '' : 'md:flex-row-reverse'
       }`}
     >
-      <motion.img
-        whileHover={{ scale: 1.02, opacity: 0.9 }}
-        whileTap={{ scale: 0.97, opacity: 0.7 }}
-        drag
-        dragConstraints={{
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-        }}
-        className="rounded md:w-[50%]"
-        src={image}
-        alt=""
-      />
+      <div className="w-[50%] rounded">
+        <motion.img
+          whileHover={{ scale: 1.02, opacity: 0.9 }}
+          whileTap={{ scale: 0.97, opacity: 0.7 }}
+          drag
+          dragConstraints={{
+            top: -1,
+            left: -1,
+            right: 1,
+            bottom: 1,
+          }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          className="rounded overflow-hidden"
+          src={image}
+          alt=""
+        />
+      </div>
 
       <div className="mx-16">
-        <h1 className="font-bold text-xl mb-4">{price}$ for </h1>
         <h1 className="text-3xl font-medium mb-6">{name}</h1>
         <p className="mb-8">{description}</p>
         <Link

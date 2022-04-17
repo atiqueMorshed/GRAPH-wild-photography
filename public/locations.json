@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "region": "Amazon Rainforest",
+    "image": "https://i.ibb.co/7XdmTk0/amazon.png",
+    "date": "2022-01-25"
+  },
+  {
+    "id": 2,
+    "region": "Kashmir",
+    "image": "https://i.ibb.co/k9YGML3/kashmir.png",
+    "date": "2021-08-23"
+  },
+  {
+    "id": 3,
+    "region": "Shundarban",
+    "image": "https://i.ibb.co/ZWZPhH8/shundarban.png",
+    "date": "2021-06-11"
+  }
+]

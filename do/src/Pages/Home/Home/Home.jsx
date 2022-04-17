@@ -1,6 +1,5 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
-import LastVisitedLocations from '../LastVisitedLocations/LastVisitedLocations';
 import Services from '../Services/Services/Services';
 
 const Home = () => {
@@ -8,7 +7,6 @@ const Home = () => {
     <div>
       <Banner />
       <Services />
-      <LastVisitedLocations />
     </div>
   );
 };
