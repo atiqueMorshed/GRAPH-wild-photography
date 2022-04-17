@@ -19,7 +19,7 @@ const HashLink = ({ id, children }) => {
 
   return (
     <button
-      className="py-2 px-4 hover:text-navy-300"
+      className="py-4 px-4 hover:text-navy-300 border-b border-gray-300 border-dashed w-full md:w-auto text-center md:py-2 md:px-4 md:hover:text-navy-300  md:border-0"
       onClick={() => scrollToId(id)}
     >
       {children}
