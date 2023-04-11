@@ -1,8 +1,5 @@
 # GRAPH - Wild Photography
 
-> [Go to Live Website](https://ph-milestone-10-graph.web.app/)
-> or https://ph-milestone-10-graph.web.app/
-
 ## Features
 
 - Homepage carousel gives an user a clear idea about the website.
